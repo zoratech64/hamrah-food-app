@@ -20,17 +20,23 @@ class $AssetsIconsGen {
   /// File path: assets/icons/error.svg
   SvgGenImage get error => const SvgGenImage('assets/icons/error.svg');
 
+  /// File path: assets/icons/google.svg
+  SvgGenImage get google => const SvgGenImage('assets/icons/google.svg');
+
   /// File path: assets/icons/info.svg
   SvgGenImage get info => const SvgGenImage('assets/icons/info.svg');
 
   /// File path: assets/icons/success.svg
   SvgGenImage get success => const SvgGenImage('assets/icons/success.svg');
 
+  /// File path: assets/icons/view.svg
+  SvgGenImage get view => const SvgGenImage('assets/icons/view.svg');
+
   /// File path: assets/icons/warning.svg
   SvgGenImage get warning => const SvgGenImage('assets/icons/warning.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [error, info, success, warning];
+  List<SvgGenImage> get values => [error, google, info, success, view, warning];
 }
 
 class $AssetsLocalizationGen {

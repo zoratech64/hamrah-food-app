@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:hamrah_food_app/config/router/route_names.dart';
 import 'package:hamrah_food_app/core/constants/size_constants.dart';
 import 'package:hamrah_food_app/features/splash/presentation/widgets/app_version_text.dart';
 import 'package:hamrah_food_app/features/update/presentation/providers/check_update_provider.dart';
@@ -37,7 +39,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
       // });
 
       if (mounted) {
-        // context.goNamed(RouteNames.instance.home);
+        context.goNamed(RouteNames.instance.home);
       }
     });
   }

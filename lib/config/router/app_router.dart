@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hamrah_food_app/config/router/route_names.dart';
+import 'package:hamrah_food_app/config/router/route_redirections.dart';
 import 'package:hamrah_food_app/core/observers/route_observer.dart';
+import 'package:hamrah_food_app/features/home/presentation/screens/home_screen.dart';
+import 'package:hamrah_food_app/features/main/presentation/screens/main_screen.dart';
+import 'package:hamrah_food_app/features/sign_in/presentation/screens/sign_in_screen.dart';
+import 'package:hamrah_food_app/features/sign_up/presentation/screens/sign_up_screen.dart';
 import 'package:hamrah_food_app/features/splash/presentation/screens/splash_screen.dart';
 
 final Provider<GlobalKey<NavigatorState>> globalNavigatorKey =
@@ -22,18 +27,18 @@ final Provider<GoRouter> goRouterProvider = Provider<GoRouter>(
         builder: (BuildContext context, GoRouterState state) =>
             const SplashScreen(),
       ),
-      // GoRoute(
-      //   path: '/${RouteNames.instance.signIn}',
-      //   name: RouteNames.instance.signIn,
-      //   builder: (BuildContext context, GoRouterState state) =>
-      //       const SignInScreen(),
-      // ),
-      // GoRoute(
-      //   path: '/${RouteNames.instance.signUp}',
-      //   name: RouteNames.instance.signUp,
-      //   builder: (BuildContext context, GoRouterState state) =>
-      //       const SignUpScreen(),
-      // ),
+      GoRoute(
+        path: '/${RouteNames.instance.signIn}',
+        name: RouteNames.instance.signIn,
+        builder: (BuildContext context, GoRouterState state) =>
+            const SignInScreen(),
+      ),
+      GoRoute(
+        path: '/${RouteNames.instance.signUp}',
+        name: RouteNames.instance.signUp,
+        builder: (BuildContext context, GoRouterState state) =>
+            const SignUpScreen(),
+      ),
       // GoRoute(
       //   path: '/${RouteNames.instance.forgotPassword}',
       //   name: RouteNames.instance.forgotPassword,
@@ -46,70 +51,70 @@ final Provider<GoRouter> goRouterProvider = Provider<GoRouter>(
       //   builder: (BuildContext context, GoRouterState state) =>
       //       const ResetPasswordScreen(),
       // ),
-      // StatefulShellRoute.indexedStack(
-      //   builder:
-      //       (
-      //         BuildContext context,
-      //         GoRouterState state,
-      //         StatefulNavigationShell navigationShell,
-      //       ) {
-      //         return MainScreen(navigationShell: navigationShell);
-      //       },
-      //   branches: <StatefulShellBranch>[
-      //     StatefulShellBranch(
-      //       routes: <RouteBase>[
-      //         GoRoute(
-      //           path: '/${RouteNames.instance.home}',
-      //           name: RouteNames.instance.home,
-      //           builder: (BuildContext context, GoRouterState state) =>
-      //               const HomeScreen(),
-      //           redirect: (BuildContext context, GoRouterState state) =>
-      //               RouteRedirections.instance.homeRedirection(ref, state),
-      //         ),
-      //       ],
-      //     ),
-      //     StatefulShellBranch(
-      //       routes: <RouteBase>[
-      //         GoRoute(
-      //           path: '/${RouteNames.instance.search}',
-      //           name: RouteNames.instance.search,
-      //           builder: (BuildContext context, GoRouterState state) =>
-      //               const SearchScreen(),
-      //         ),
-      //       ],
-      //     ),
-      //     StatefulShellBranch(
-      //       routes: <RouteBase>[
-      //         GoRoute(
-      //           path: '/${RouteNames.instance.categories}',
-      //           name: RouteNames.instance.categories,
-      //           builder: (BuildContext context, GoRouterState state) =>
-      //               const CategoriesScreen(),
-      //         ),
-      //       ],
-      //     ),
-      //     StatefulShellBranch(
-      //       routes: <RouteBase>[
-      //         GoRoute(
-      //           path: '/${RouteNames.instance.myList}',
-      //           name: RouteNames.instance.myList,
-      //           builder: (BuildContext context, GoRouterState state) =>
-      //               const MyListScreen(),
-      //         ),
-      //       ],
-      //     ),
-      //     StatefulShellBranch(
-      //       routes: <RouteBase>[
-      //         GoRoute(
-      //           path: '/${RouteNames.instance.profile}',
-      //           name: RouteNames.instance.profile,
-      //           builder: (BuildContext context, GoRouterState state) =>
-      //               const ProfileScreen(),
-      //         ),
-      //       ],
-      //     ),
-      //   ],
-      // ),
+      StatefulShellRoute.indexedStack(
+        builder:
+            (
+              BuildContext context,
+              GoRouterState state,
+              StatefulNavigationShell navigationShell,
+            ) {
+              return MainScreen(navigationShell: navigationShell);
+            },
+        branches: <StatefulShellBranch>[
+          StatefulShellBranch(
+            routes: <RouteBase>[
+              GoRoute(
+                path: '/${RouteNames.instance.home}',
+                name: RouteNames.instance.home,
+                builder: (BuildContext context, GoRouterState state) =>
+                    const HomeScreen(),
+                redirect: (BuildContext context, GoRouterState state) =>
+                    RouteRedirections.instance.homeRedirection(ref, state),
+              ),
+            ],
+          ),
+          // StatefulShellBranch(
+          //   routes: <RouteBase>[
+          //     GoRoute(
+          //       path: '/${RouteNames.instance.search}',
+          //       name: RouteNames.instance.search,
+          //       builder: (BuildContext context, GoRouterState state) =>
+          //           const SearchScreen(),
+          //     ),
+          //   ],
+          // ),
+          // StatefulShellBranch(
+          //   routes: <RouteBase>[
+          //     GoRoute(
+          //       path: '/${RouteNames.instance.categories}',
+          //       name: RouteNames.instance.categories,
+          //       builder: (BuildContext context, GoRouterState state) =>
+          //           const CategoriesScreen(),
+          //     ),
+          //   ],
+          // ),
+          // StatefulShellBranch(
+          //   routes: <RouteBase>[
+          //     GoRoute(
+          //       path: '/${RouteNames.instance.myList}',
+          //       name: RouteNames.instance.myList,
+          //       builder: (BuildContext context, GoRouterState state) =>
+          //           const MyListScreen(),
+          //     ),
+          //   ],
+          // ),
+          // StatefulShellBranch(
+          //   routes: <RouteBase>[
+          //     GoRoute(
+          //       path: '/${RouteNames.instance.profile}',
+          //       name: RouteNames.instance.profile,
+          //       builder: (BuildContext context, GoRouterState state) =>
+          //           const ProfileScreen(),
+          //     ),
+          //   ],
+          // ),
+        ],
+      ),
       // GoRoute(
       //   path: '/${RouteNames.instance.promptDetails}',
       //   name: RouteNames.instance.promptDetails,

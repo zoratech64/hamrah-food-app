@@ -14,11 +14,11 @@ class ColorConstants {
 }
 
 class DarkColorConstants {
-  Color get primary => const Color(0xFF4D8DFF); // Todo: use for buttons
+  Color get primary => const Color(0xFF4CAF50); // Todo: use for buttons
   Color get surface => const Color(0xFF12141C);
 
   Color get scaffoldBackground => const Color(0xFF0E0F13);
-  Color get floatingActionButtonBackground => const Color(0xFF4D8DFF);
+  Color get floatingActionButtonBackground => const Color(0xFF4CAF50);
   Color get bottomNavigationBarBackground => const Color(0xFF0E0F13);
   Color get appBarBackground => const Color(0xFF0E0F13);
   Color get card => const Color(0xFF0E0F13);
@@ -28,7 +28,7 @@ class DarkColorConstants {
   Color get text => const Color(0xFFFFFFFF);
   Color get divider => const Color(0xFF636980);
   Color get icon => const Color(0xFFFFFFFF);
-  Color get elevatedButtonBackground => const Color(0xFF4D8DFF);
+  Color get elevatedButtonBackground => const Color(0xFF4CAF50);
 
   Color get success => const Color(0xFF2ED47A);
   Color get error => const Color(0xFFFF5C5C);
