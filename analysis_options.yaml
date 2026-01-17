@@ -7,6 +7,9 @@
 
 # The following line activates a set of recommended lints for Flutter apps,
 # packages, and plugins designed to encourage good coding practices.
+analyzer:
+  errors:
+    constant_identifier_names: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:
@@ -23,6 +26,42 @@ linter:
   rules:
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    always_declare_return_types: true # Declare method return types.
+    always_put_control_body_on_new_line: true # Separate the control structure expression from its statement.
+    always_put_required_named_parameters_first: true # Put required named parameters first.
+    always_specify_types: true # Specify type annotations.
+    always_use_package_imports: true # Avoid relative imports for files in lib/.
+    annotate_overrides: true # Annotate overridden members.
+    avoid_annotating_with_dynamic: true # Avoid annotating with dynamic when not required.
+    avoid_as: true # Avoid using as.
+    avoid_bool_literals_in_conditional_expressions: true # Avoid bool literals in conditional expressions.
+    avoid_catches_without_on_clauses: true # Avoid catches without on clauses.
+    avoid_classes_with_only_static_members: true # Avoid defining a class that contains only static members.
+    avoid_double_and_int_checks: true # Avoid double and int checks.
+    avoid_dynamic_calls: true # Avoid method calls or property accesses on a dynamic target.
+    avoid_empty_else: true # Avoid empty statements in else clauses.
+    avoid_escaping_inner_quotes: false # Avoid escaping inner quotes by converting surrounding quotes.
+    avoid_field_initializers_in_const_classes: true # Avoid field initializers in const classes.
+    avoid_final_parameters: true # Avoid final for parameter declarations.
+    avoid_function_literals_in_foreach_calls: true # Avoid using forEach with a function literal.
+    avoid_futureor_void: true # Avoid using 'FutureOr' as the type of a result.
+    avoid_implementing_value_types: true # Don't implement classes that override ==.
+    avoid_init_to_null: true # Don't explicitly initialize variables to null.
+    avoid_js_rounded_ints: true # Avoid JavaScript rounded ints.
+    avoid_multiple_declarations_per_line: true # Don't declare multiple variables on a single line.
+    avoid_positional_boolean_parameters: true # Avoid positional boolean parameters.
+    avoid_print: true # Avoid print calls in production code.
+    avoid_redundant_argument_values: true # Avoid redundant argument values.
+    avoid_relative_lib_imports: true # Avoid relative imports for files in lib/.
+    avoid_renaming_method_parameters: true # Don't rename parameters of overridden methods.
+    avoid_return_types_on_setters: true # Avoid return types on setters.
+    avoid_returning_null: true # Avoid returning null from members whose return type is bool, double, int, or num.
+    avoid_returning_null_for_future: true # Avoid returning null for Future.
+    avoid_returning_null_for_void: true # Avoid returning null for void.
+    avoid_returning_this: true # Avoid returning this from methods just to enable a fluent interface.
+    avoid_setters_without_getters: true # Avoid setters without getters.
+    avoid_shadowing_type_parameters: true # Avoid shadowing type parameters.
+    avoid_single_cascade_in_expression_statements: true # avoid_single_cascade_in_expression_statements
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

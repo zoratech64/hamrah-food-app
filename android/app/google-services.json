@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "604672103115",
+    "project_id": "hamrah-app-b12e1",
+    "storage_bucket": "hamrah-app-b12e1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604672103115:android:1a727085989c353f07c14e",
+        "android_client_info": {
+          "package_name": "com.zora.tech.hamrah_food_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9DkT-BkXawkGjR8Gi-BnNFCidt_zpmgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
